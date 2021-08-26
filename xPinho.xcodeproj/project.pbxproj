@@ -13,6 +13,10 @@
 		13D416E726B5EE2600DAE83A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13D416E526B5EE2600DAE83A /* Main.storyboard */; };
 		13D416E926B5EE2900DAE83A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13D416E826B5EE2900DAE83A /* Assets.xcassets */; };
 		13D416EC26B5EE2900DAE83A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13D416EA26B5EE2900DAE83A /* LaunchScreen.storyboard */; };
+		13D416F426B5EE9E00DAE83A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D416F326B5EE9E00DAE83A /* CollectionViewCell.swift */; };
+		13D416F626B5F0F000DAE83A /* Dependences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D416F526B5F0F000DAE83A /* Dependences.swift */; };
+		13D416F826B5F4D700DAE83A /* TextosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D416F726B5F4D700DAE83A /* TextosViewController.swift */; };
+		13D416FA26B5F71300DAE83A /* Cartinhas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D416F926B5F71300DAE83A /* Cartinhas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		13D416E826B5EE2900DAE83A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13D416EB26B5EE2900DAE83A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13D416ED26B5EE2900DAE83A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13D416F326B5EE9E00DAE83A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		13D416F526B5F0F000DAE83A /* Dependences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependences.swift; sourceTree = "<group>"; };
+		13D416F726B5F4D700DAE83A /* TextosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextosViewController.swift; sourceTree = "<group>"; };
+		13D416F926B5F71300DAE83A /* Cartinhas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartinhas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +67,14 @@
 				13D416DF26B5EE2600DAE83A /* AppDelegate.swift */,
 				13D416E126B5EE2600DAE83A /* SceneDelegate.swift */,
 				13D416E326B5EE2600DAE83A /* ViewController.swift */,
+				13D416F726B5F4D700DAE83A /* TextosViewController.swift */,
+				13D416F526B5F0F000DAE83A /* Dependences.swift */,
+				13D416F926B5F71300DAE83A /* Cartinhas.swift */,
 				13D416E526B5EE2600DAE83A /* Main.storyboard */,
 				13D416E826B5EE2900DAE83A /* Assets.xcassets */,
 				13D416EA26B5EE2900DAE83A /* LaunchScreen.storyboard */,
 				13D416ED26B5EE2900DAE83A /* Info.plist */,
+				13D416F326B5EE9E00DAE83A /* CollectionViewCell.swift */,
 			);
 			path = xPinho;
 			sourceTree = "<group>";
@@ -138,7 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13D416E426B5EE2600DAE83A /* ViewController.swift in Sources */,
+				13D416F826B5F4D700DAE83A /* TextosViewController.swift in Sources */,
+				13D416F626B5F0F000DAE83A /* Dependences.swift in Sources */,
+				13D416FA26B5F71300DAE83A /* Cartinhas.swift in Sources */,
 				13D416E026B5EE2600DAE83A /* AppDelegate.swift in Sources */,
+				13D416F426B5EE9E00DAE83A /* CollectionViewCell.swift in Sources */,
 				13D416E226B5EE2600DAE83A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,16 +303,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = V8V28A4DX2;
 				INFOPLIST_FILE = xPinho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = biaduque.xPinho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,16 +324,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = V8V28A4DX2;
 				INFOPLIST_FILE = xPinho/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = biaduque.xPinho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,24 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="42w-er-BB8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Feliz aniversário!-->
+        <scene sceneID="hNN-P2-FGC">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <collectionViewController id="AG5-I8-TPu" customClass="CollectionViewController" customModule="collectionViewTeste" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SjE-5T-uaP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zdm-uR-DzF">
+                            <size key="itemSize" width="219" height="155"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="J6r-6K-DHL" customClass="CollectionViewCell" customModule="collectionViewTeste" customModuleProvider="target">
+                                <rect key="frame" x="97.5" y="0.0" width="219" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zEv-Gx-xYy">
+                                    <rect key="frame" x="0.0" y="0.0" width="219" height="155"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="presentePinho" translatesAutoresizingMaskIntoConstraints="NO" id="uzC-dw-Fs4">
+                                            <rect key="frame" x="0.0" y="0.0" width="219" height="155"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="155" id="1gw-PH-eEb"/>
+                                                <constraint firstAttribute="width" constant="219" id="Qfm-QT-VQV"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="uzC-dw-Fs4" secondAttribute="bottom" id="4FZ-4o-Wa6"/>
+                                        <constraint firstAttribute="trailing" secondItem="uzC-dw-Fs4" secondAttribute="trailing" id="8M2-EE-SUk"/>
+                                        <constraint firstItem="uzC-dw-Fs4" firstAttribute="leading" secondItem="zEv-Gx-xYy" secondAttribute="leading" id="Txs-AF-OJn"/>
+                                        <constraint firstItem="uzC-dw-Fs4" firstAttribute="top" secondItem="zEv-Gx-xYy" secondAttribute="top" id="cbY-eX-gxp"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" red="0.1764705882" green="0.61960784310000006" blue="0.62745098040000002" alpha="0.8980392157" colorSpace="calibratedRGB"/>
+                                <size key="customSize" width="219" height="155"/>
+                                <connections>
+                                    <outlet property="imagemPresente" destination="uzC-dw-Fs4" id="VDO-fj-Q3o"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="AG5-I8-TPu" id="hs3-o6-7C5"/>
+                            <outlet property="delegate" destination="AG5-I8-TPu" id="8Km-ii-Aci"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Feliz aniversário!" largeTitleDisplayMode="always" id="dJh-Y8-NAp"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vbn-5I-Bj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="942.02898550724649" y="569.86607142857144"/>
+        </scene>
+        <!--Textos View Controller-->
+        <scene sceneID="6Km-8h-edD">
+            <objects>
+                <viewController storyboardIdentifier="textos" id="oQ0-Yn-jUU" customClass="TextosViewController" customModule="xPinho" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ytc-pr-ZVv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartinha" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdt-wx-W0m">
+                                <rect key="frame" x="20" y="745" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="JFa-Ss-oVK"/>
+                                    <constraint firstAttribute="height" constant="21" id="yVZ-mP-HeD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="srI-Zg-qnA">
+                                <rect key="frame" x="20" y="88" width="374" height="649"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Soo-1k-eIN"/>
+                                    <constraint firstAttribute="height" constant="649" id="W1Y-6B-mgD"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartinha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7va-AL-81b">
+                                <rect key="frame" x="20" y="44" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Gpp-7r-4sn"/>
+                                    <constraint firstAttribute="width" constant="374" id="LQ2-VT-ceK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vBB-qB-dBO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="srI-Zg-qnA" firstAttribute="leading" secondItem="vBB-qB-dBO" secondAttribute="leading" constant="20" id="5ow-Gd-bZn"/>
+                            <constraint firstItem="vBB-qB-dBO" firstAttribute="bottom" secondItem="wdt-wx-W0m" secondAttribute="bottom" constant="96" id="Hwo-Vk-6cm"/>
+                            <constraint firstItem="vBB-qB-dBO" firstAttribute="trailing" secondItem="srI-Zg-qnA" secondAttribute="trailing" constant="20" id="RA4-60-tJF"/>
+                            <constraint firstItem="7va-AL-81b" firstAttribute="top" secondItem="vBB-qB-dBO" secondAttribute="top" id="VKB-zS-gxc"/>
+                            <constraint firstItem="vBB-qB-dBO" firstAttribute="trailing" secondItem="7va-AL-81b" secondAttribute="trailing" constant="20" id="WcL-rM-yUI"/>
+                            <constraint firstItem="srI-Zg-qnA" firstAttribute="top" secondItem="7va-AL-81b" secondAttribute="bottom" constant="8" id="Y6w-iY-j7T"/>
+                            <constraint firstItem="wdt-wx-W0m" firstAttribute="top" secondItem="srI-Zg-qnA" secondAttribute="bottom" constant="8" symbolic="YES" id="dyb-XK-Ixp"/>
+                            <constraint firstItem="7va-AL-81b" firstAttribute="leading" secondItem="vBB-qB-dBO" secondAttribute="leading" constant="20" id="fh6-NT-dGW"/>
+                            <constraint firstItem="vBB-qB-dBO" firstAttribute="trailing" secondItem="wdt-wx-W0m" secondAttribute="trailing" constant="20" id="xM8-Ek-Pxq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nome" destination="wdt-wx-W0m" id="cA8-7S-plX"/>
+                        <outlet property="texto" destination="srI-Zg-qnA" id="nfw-Iw-vcp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCx-nS-7d8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692.753623188406" y="569.86607142857144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SGC-nV-nei">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="42w-er-BB8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HsD-QX-Xrs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AG5-I8-TPu" kind="relationship" relationship="rootViewController" id="fqE-Yb-cdS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gdg-ya-cYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="570.53571428571422"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.58431372549019611" green="0.45882352941176469" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <image name="presentePinho" width="2343" height="1599"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
